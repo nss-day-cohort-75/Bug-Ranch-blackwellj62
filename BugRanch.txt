@@ -1,0 +1,34 @@
+
+participant Main
+participant Cattle
+participant Drovers
+
+participant Journey
+
+
+participant database
+
+participant utils
+
+Main->Cattle: import roundup function for cattle data
+Main<--Cattle: Returns roundup function
+Main->Drovers: import hireDrovers function for drover data
+Main<--Drovers: Returns hireDrovers function
+Main->Journey: import journeyMaker function for journey data
+Main<--Journey: Returns journeyMaker function
+Main->Drovers: invoke the hireDrovers function
+Drovers->database: imports drover data including id, name, and gender
+Drovers<--database: returns drover data as an array
+note right of Drovers: hireDrover function selects 5 drovers at random and stores them in an array
+Main<--Drovers: returns the 5 random drovers
+Main->Cattle: invoke the roundup function
+Cattle->database: imports all cattle
+Cattle<--database: returns cattle data as an array
+note right of Cattle: roundup function creates an array of 50 randomly selected cattle breeds
+Main<--Cattle: returns 50 random cattle breeds
+Main->Journey: invoke journeyMaker function
+Journey -> utils:import randomize function
+Journey<--utils: here is randomize function
+note right of Journey: journeyMaker function runs invoking other functions to randomly select and create an array of various areas including rivers, forrests, mountains, plains. 
+Main<--Journey: returns randonly selected journey areas
+note right of Main:console displays a meassage detailing the vacation package, Kansas Slim's Cattle Adventure, based on the values gathered from the various functions
