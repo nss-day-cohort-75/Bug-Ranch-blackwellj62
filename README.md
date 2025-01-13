@@ -82,7 +82,7 @@ Your journey will take you through the wildness of the American Midwest and acro
    > Drovers contains the array that we created from the hireDrovers function and we will iterate through it and store values in the drover variable. This will then log a message to the console containing the first and last name of each drover. 
 
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > https://www.loom.com/share/eccb2aa3ea2a4936ab8a9c865bc26887?sid=614a7a4e-3051-41d6-9c2c-a26d8070410e
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -90,11 +90,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This line of code is a for loop that uses the forrestNumber variable to iterate through the forests section of the areas object. The iteration will start at 0 and as long as the number is less than the number of forests determined from the createForests function it will continue. Once the iteration reaches a number greater than that it will stop looping and return the string "forest" to the journey array.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The database variable contains two objects, cattleTypes and drovers. Each of these objects contains an array of objects. 
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > The herdSize variable is being used to define the numbersNeeded of drovers. Its value is determined in the cattle module by the roundup function. 
 
 ## When You Are Done
 
